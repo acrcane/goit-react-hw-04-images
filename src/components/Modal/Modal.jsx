@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { Overlay, ModalWinow } from "./Modal.styled";
 import { useEffect } from "react";
@@ -27,7 +27,7 @@ const Modal = ({ children, onClose }) => {
 
     return(
         <Overlay onClick={handleBackdropClick}>
-        <ModalWinow> {children}  </ModalWinow>
+            <ModalWinow> {children}  </ModalWinow>
         </Overlay>
     )
 };
@@ -36,5 +36,9 @@ Modal.propTypes = {
     children: PropTypes.element.isRequired,
     onClose: PropTypes.func.isRequired,
 };
+
+// Modal.propTypes = {
+//     children: PropTypes.element.isRequired
+// };
 
 export default Modal

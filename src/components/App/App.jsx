@@ -18,13 +18,11 @@ export const App = () => {
   const [total, setTotal] = useState(null);
 
   useEffect(() => {
-    // Перевіряємо наявність елемента 'loader-root' при завантаженні компонента
+
     const loaderElement = document.getElementById('loader-root');
     if (!loaderElement) {
-      // Якщо елемент не існує, створюємо його
       const newLoaderElement = document.createElement('div');
       newLoaderElement.setAttribute('id', 'loader-root');
-      // Тут ви можете встановити стилі або класи за необхідності
       document.body.appendChild(newLoaderElement);
     }
   }, []);
